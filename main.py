@@ -97,6 +97,7 @@ def get_solution_code(year, day, part, temperature):
 
 
 def generate_solution(year, day, part, temperature):
+    # use the [insert] code to write the full solution function
     insert_code = get_solution_code(year, day, part, temperature)
 
     function_name = f"solution_{year}_{day}_{part}"
@@ -109,6 +110,8 @@ def generate_solution(year, day, part, temperature):
 
 
 def get_prompt(year, day, part, temperature):
+    # build the full prompt for the openai api
+
     prompt = ""
     for i in range(1, part + 1):
         desc = get_desc(year, day, i)
